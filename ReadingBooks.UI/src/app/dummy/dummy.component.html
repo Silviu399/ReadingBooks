@@ -1,0 +1,5 @@
+<p>dummy works!</p>
+<button mat-button (click)="getBooks()">Add</button><br/>
+<ngTemplate *ngIf="!!book">
+  <img src="{{book['imageLinks']?.thumbnail}}">
+</ngTemplate>

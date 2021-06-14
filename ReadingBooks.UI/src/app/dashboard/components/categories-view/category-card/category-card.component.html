@@ -1,0 +1,13 @@
+<mat-card class="container">
+  <div class="card-details">
+    <div>
+      <mat-card-title>{{category.name}}</mat-card-title>
+    </div>
+    <div>
+      <mat-card-subtitle>Nivelul {{category.level}}</mat-card-subtitle>
+      <mat-card-subtitle>XP {{category.experience}}</mat-card-subtitle>
+    </div>
+  </div>
+
+    <mat-progress-bar mode="determinate" value="{{category.experience}}"></mat-progress-bar>
+</mat-card>

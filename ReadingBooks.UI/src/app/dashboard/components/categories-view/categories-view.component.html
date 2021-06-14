@@ -1,0 +1,8 @@
+<mat-card>
+    <div>
+        <h2>UserMainLevel</h2>
+        <mat-progress-bar mode="determinate" value="30"></mat-progress-bar>
+        <hr />
+    </div>
+    <app-category-card *ngFor="let category of categories" [category]="category"></app-category-card>
+</mat-card>

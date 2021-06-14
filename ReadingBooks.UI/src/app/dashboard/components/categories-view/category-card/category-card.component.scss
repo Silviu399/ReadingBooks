@@ -1,0 +1,12 @@
+.container {
+  margin-bottom: 7px;
+
+  .card-details {
+    display: flex;
+    justify-content: space-between;
+
+    mat-card-subtitle {
+      margin-bottom: 8px;
+    }
+  }
+}

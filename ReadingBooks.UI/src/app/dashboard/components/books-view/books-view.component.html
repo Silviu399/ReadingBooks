@@ -1,0 +1,8 @@
+<mat-card class="mat-card">
+  <div>
+    <h2>Azi am citit <input type="number" class="nr" /> pagini.</h2>
+    <h2>Tinta e sa citesc <input type="number" class="nr" /> pagini/zi.</h2>
+  </div>
+
+  <app-book-card *ngFor="let book of books" [book]="book"></app-book-card>
+</mat-card>
