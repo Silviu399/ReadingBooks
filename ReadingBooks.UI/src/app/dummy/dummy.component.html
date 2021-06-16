@@ -1,5 +1,12 @@
-<p>dummy works just fine!</p>
-<button mat-button (click)="getBooks()">Add</button><br/>
-<ngTemplate *ngIf="!!book">
-  <img src="{{book['imageLinks']?.thumbnail}}">
-</ngTemplate>
+<div class="search-container">
+  <form (submit)="$event.preventDefault()">
+    <mat-form-field>
+      <mat-label>Nume carte</mat-label>
+      <input matInput #bookName>
+    </mat-form-field>
+    <button id='cauta' mat-raised-button (click)="getBooks()">Cauta</button>
+  </form>
+  <div *ngIf="books.length != 0" class="listContainer">
+    <app-book-card *ngFor="let book of books" [book]="book"></app-book-card>
+  </div>
+</div>

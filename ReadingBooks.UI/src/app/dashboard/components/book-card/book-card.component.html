@@ -1,12 +1,12 @@
 <mat-card class="container">
   <div class="card-details">
     <div>
-      <mat-card-title>{{book.title}}</mat-card-title>
+      <mat-card-title class="card-title">{{book.title}}</mat-card-title>
       <mat-card-subtitle>{{book.autor}}</mat-card-subtitle>
     </div>
     <div>
       <mat-card-subtitle>{{book.categorii}}</mat-card-subtitle>
-      <mat-card-subtitle>{{book.nrPag}} pag</mat-card-subtitle>
+      <mat-card-subtitle *ngIf="book.nrPag!=0" class="nr-pag">{{book.nrPag}} pag</mat-card-subtitle>
     </div>
   </div>
     <mat-progress-bar mode="determinate" value="{{book.progres}}"></mat-progress-bar>

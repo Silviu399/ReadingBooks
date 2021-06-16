@@ -5,8 +5,20 @@
     display: flex;
     justify-content: space-between;
 
+    .card-title {
+      white-space: normal;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      font-size: medium;
+    }
+
     mat-card-subtitle {
       margin-bottom: 8px;
+    }
+
+    .nr-pag {
+      width: 60px;
+      text-align: end;
     }
   }
 }
