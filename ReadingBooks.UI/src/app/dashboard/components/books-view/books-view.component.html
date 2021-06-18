@@ -1,3 +1,7 @@
 <mat-card class="mat-card">
-  <app-book-card *ngFor="let book of books" [book]="book"></app-book-card>
+  <app-book-card
+    *ngFor="let book of books"
+    [book]="book"
+    (click)="openAddPagesDialog()"
+  ></app-book-card>
 </mat-card>

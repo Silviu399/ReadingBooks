@@ -3,13 +3,14 @@ import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 
 import { AppRoutingModule } from './app-routing.module';
-import {MatToolbarModule} from '@angular/material/toolbar';
-import {MatButtonModule} from '@angular/material/button';
-import {MatIconModule} from '@angular/material/icon';
-import {MatProgressBarModule} from '@angular/material/progress-bar';
-import {MatCardModule} from '@angular/material/card';
-import {MatInputModule} from '@angular/material/input';
-import {MatTabsModule} from '@angular/material/tabs';
+import { MatToolbarModule } from '@angular/material/toolbar';
+import { MatButtonModule } from '@angular/material/button';
+import { MatIconModule } from '@angular/material/icon';
+import { MatProgressBarModule } from '@angular/material/progress-bar';
+import { MatCardModule } from '@angular/material/card';
+import { MatInputModule } from '@angular/material/input';
+import { MatTabsModule } from '@angular/material/tabs';
+import { MatDialogModule } from '@angular/material/dialog';
 
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -21,7 +22,9 @@ import { CategoriesViewComponent } from './dashboard/components/categories-view/
 import { LoginComponent } from './login/login.component';
 import { BookCardComponent } from './dashboard/components/book-card/book-card.component';
 import { CategoryCardComponent } from './dashboard/components/categories-view/category-card/category-card.component';
-import { HttpClient, HttpClientModule } from '@angular/common/http';
+import { HttpClientModule } from '@angular/common/http';
+import { AddBookDialogComponent } from './dashboard/components/add-book-dialog/add-book-dialog.component';
+import { AddPagesDialogComponent } from './dashboard/components/add-pages-dialog/add-pages-dialog.component';
 
 @NgModule({
   declarations: [
@@ -33,7 +36,9 @@ import { HttpClient, HttpClientModule } from '@angular/common/http';
     CategoriesViewComponent,
     LoginComponent,
     BookCardComponent,
-    CategoryCardComponent
+    CategoryCardComponent,
+    AddBookDialogComponent,
+    AddPagesDialogComponent,
   ],
   imports: [
     BrowserModule,
@@ -47,9 +52,10 @@ import { HttpClient, HttpClientModule } from '@angular/common/http';
     MatCardModule,
     MatInputModule,
     MatTabsModule,
-    HttpClientModule
+    MatDialogModule,
+    HttpClientModule,
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

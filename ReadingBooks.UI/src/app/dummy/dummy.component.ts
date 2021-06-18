@@ -2,6 +2,8 @@ import { HttpClient } from '@angular/common/http';
 import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 import { Book } from '../models/book.model';
 import { BooksService } from '../services/books.service';
+import { MatDialog } from '@angular/material/dialog';
+import { AddBookDialogComponent } from '../dashboard/components/add-book-dialog/add-book-dialog.component';
 
 @Component({
   selector: 'app-dummy',
@@ -13,7 +15,11 @@ export class DummyComponent {
 
   public books: Book[] = [];
 
-  constructor(private http: HttpClient, private _bookService: BooksService) {}
+  constructor(
+    private http: HttpClient,
+    private _bookService: BooksService,
+    private dialog: MatDialog
+  ) {}
 
   getBooks() {
     this.books = [];
@@ -31,5 +37,11 @@ export class DummyComponent {
           this.books.push(book);
         });
       });
+  }
+
+  openAddBookDialog(book: Book) {
+    this.dialog.open(AddBookDialogComponent, {
+      data: book,
+    });
   }
 }

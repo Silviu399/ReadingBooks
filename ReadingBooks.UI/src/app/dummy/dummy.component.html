@@ -2,11 +2,15 @@
   <form (submit)="$event.preventDefault()">
     <mat-form-field>
       <mat-label>Nume carte</mat-label>
-      <input matInput #bookName>
+      <input matInput #bookName />
     </mat-form-field>
-    <button id='cauta' mat-raised-button (click)="getBooks()">Cauta</button>
+    <button id="cauta" mat-raised-button (click)="getBooks()">Cauta</button>
   </form>
   <div *ngIf="books.length != 0" class="listContainer">
-    <app-book-card *ngFor="let book of books" [book]="book"></app-book-card>
+    <app-book-card
+      *ngFor="let book of books"
+      [book]="book"
+      (click)="openAddBookDialog(book)"
+    ></app-book-card>
   </div>
 </div>
