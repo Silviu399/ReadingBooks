@@ -26,6 +26,20 @@ import { HttpClientModule } from '@angular/common/http';
 import { AddBookDialogComponent } from './dashboard/components/add-book-dialog/add-book-dialog.component';
 import { AddPagesDialogComponent } from './dashboard/components/add-pages-dialog/add-pages-dialog.component';
 
+import { AngularFireModule } from '@angular/fire';
+import { AngularFirestoreModule } from '@angular/fire/firestore';
+import { AngularFireStorageModule } from '@angular/fire/storage';
+import { AngularFireAuthModule } from '@angular/fire/auth';
+
+const firebaseConfig = {
+  apiKey: "AIzaSyBEwqTIZAQP_6VkKT7Q2M7V4TG-FDE0jck",
+  authDomain: "readingbooks-b23d3.firebaseapp.com",
+  projectId: "readingbooks-b23d3",
+  storageBucket: "readingbooks-b23d3.appspot.com",
+  messagingSenderId: "642155826507",
+  appId: "1:642155826507:web:7e221e6872b23b62b36cce"
+};
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -54,6 +68,10 @@ import { AddPagesDialogComponent } from './dashboard/components/add-pages-dialog
     MatTabsModule,
     MatDialogModule,
     HttpClientModule,
+    AngularFireModule.initializeApp(firebaseConfig),
+    AngularFirestoreModule, // firestore
+    AngularFireAuthModule, // auth
+    AngularFireStorageModule // storage
   ],
   providers: [],
   bootstrap: [AppComponent],
