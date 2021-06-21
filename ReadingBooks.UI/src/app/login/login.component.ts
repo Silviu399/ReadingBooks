@@ -1,24 +1,25 @@
+import { JsonpClientBackend } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { User } from '../models/user.model';
 
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
-  styleUrls: ['./login.component.scss']
+  styleUrls: ['./login.component.scss'],
 })
-export class LoginComponent implements OnInit {
+export class LoginComponent {
+  constructor(public route: Router) {}
 
-  username: string;
-  password: string;
-  constructor() { }
-
-  ngOnInit(): void {
-  }
-
-  LoginUser() {
-    if (this.username == "admin" && this.password == "admin123")
-    {
-      console.log("Welcome!")
+  public toBooks(event) {
+    const user: User = {
+      uid: event.uid,
+      displayName: event.displayName,
+      email: event.email,
+      photoURL: event.photoURL
     }
+    const jsonUser = JSON.stringify(user);
+    sessionStorage.setItem('user', jsonUser);
+    this.route.navigate(['/carti']);
   }
-
 }
