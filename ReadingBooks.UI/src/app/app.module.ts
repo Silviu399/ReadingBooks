@@ -30,6 +30,11 @@ import { AngularFireModule } from '@angular/fire';
 import { AngularFirestoreModule } from '@angular/fire/firestore';
 import { AngularFireStorageModule } from '@angular/fire/storage';
 import { AngularFireAuthModule } from '@angular/fire/auth';
+import { NgxAuthFirebaseUIModule } from 'ngx-auth-firebaseui';
+
+function firebaseAppNameFactory() {
+  return 'my-app';
+}
 
 const firebaseConfig = {
   apiKey: "AIzaSyBEwqTIZAQP_6VkKT7Q2M7V4TG-FDE0jck",
@@ -71,7 +76,10 @@ const firebaseConfig = {
     AngularFireModule.initializeApp(firebaseConfig),
     AngularFirestoreModule, // firestore
     AngularFireAuthModule, // auth
-    AngularFireStorageModule // storage
+    AngularFireStorageModule, NgxAuthFirebaseUIModule.forRoot(firebaseConfig, firebaseAppNameFactory, {
+      authGuardFallbackURL: '/login',
+      authGuardLoggedInURL: '/carti',
+    }) // storage
   ],
   providers: [],
   bootstrap: [AppComponent],
