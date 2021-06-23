@@ -9,5 +9,6 @@ namespace ShopCompanion.API.Services
     public interface IBookService
     {
         int CreateBook(Book book);
+        List<string> GetCategory();
     }
 }

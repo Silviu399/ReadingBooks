@@ -22,10 +22,18 @@ namespace ShopCompanion.API.Controllers
 
         [HttpPost]
         [Route("CreateBook")]
-        public ActionResult<int> CreateBook(string bookName)
+        public ActionResult<int> CreateBook(Book book)
         {
-            var createdId = _bookService.CreateBook(bookName);
-            return createdId;
+            var result = _bookService.CreateBook(book);
+            return result;
+        }
+
+        [HttpGet]
+        [Route("GetCategory")]
+        public ActionResult<List<string>> GetCategory()
+        {
+            var result = _bookService.GetCategory();
+            return result;
         }
     }
 }

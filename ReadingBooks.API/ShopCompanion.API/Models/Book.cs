@@ -15,15 +15,17 @@ namespace ShopCompanion.API.Models
         public int NrPag { get; set; }
         public int Progres { get; set; }
 
-        public Book(int id, string uiduser, string title, string autor, string categorii, int nrPag, int progres) 
+        public Book(int id, string uidUser, string title, string autor, string categorii, int nrPag, int progres) 
         {
             Id = id;
-            UidUser = uiduser;
+            UidUser = uidUser;
             Title = title;
             Autor = autor;
             Categorii = categorii;
             NrPag = nrPag;
             Progres = progres;
         }
+
+        public Book() { }
     }
 }

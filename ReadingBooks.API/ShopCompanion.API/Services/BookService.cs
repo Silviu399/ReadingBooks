@@ -22,11 +22,21 @@ namespace ShopCompanion.API.Services
         public int CreateBook(Book book)
         {
             var sqlQuery = @$"INSERT INTO Books
-                            VALUES (@id, @uiduser, @title, @autor, @categorii, @nrPag, @progres)";
+                            VALUES (@uiduser, @title, @autor, @categorii, @nrPag, @progres)";
             using (IDbConnection connection = new SqlConnection(_configuration.GetConnectionString("LocalDB")))
             {
-                var numberOfRowAffected = connection.Query<int>(sqlQuery).ToList();
-                return numberOfRowAffected[0];
+                var numberOfRowAffected = connection.Execute(sqlQuery, book);
+                return numberOfRowAffected;
+            }
+        }
+
+        public List<string> GetCategory()
+        {
+            var sqlQuery = @$"SELECT Categorie FROM Categorii";
+            using (IDbConnection connection = new SqlConnection(_configuration.GetConnectionString("LocalDB")))
+            {
+                var numberOfRowAffected = connection.Query<string>(sqlQuery).ToList();
+                return numberOfRowAffected;
             }
         }
     }
