@@ -10,11 +10,14 @@
         "projectUniqueName": "D:\\Git\\Shoping Companion\\ShopCompanion.API\\ShopCompanion.API\\ShopCompanion.API.csproj",
         "projectName": "ShopCompanion.API",
         "projectPath": "D:\\Git\\Shoping Companion\\ShopCompanion.API\\ShopCompanion.API\\ShopCompanion.API.csproj",
-        "packagesPath": "C:\\Users\\Catalin\\.nuget\\packages\\",
+        "packagesPath": "C:\\Users\\Lavy\\.nuget\\packages\\",
         "outputPath": "D:\\Git\\Shoping Companion\\ShopCompanion.API\\ShopCompanion.API\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
         "configFilePaths": [
-          "C:\\Users\\Catalin\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Lavy\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -67,7 +70,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.101\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.301\\RuntimeIdentifierGraph.json"
         }
       }
     }

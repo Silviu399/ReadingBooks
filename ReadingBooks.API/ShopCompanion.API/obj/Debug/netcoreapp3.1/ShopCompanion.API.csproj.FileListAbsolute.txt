@@ -61,7 +61,6 @@ D:\Git\Shoping Companion\ShopCompanion.API\ShopCompanion.API\bin\Debug\netcoreap
 D:\Git\Shoping Companion\ShopCompanion.API\ShopCompanion.API\bin\Debug\netcoreapp3.1\runtimes\win-x86\native\sni.dll
 D:\Git\Shoping Companion\ShopCompanion.API\ShopCompanion.API\bin\Debug\netcoreapp3.1\runtimes\unix\lib\netcoreapp2.1\System.Data.SqlClient.dll
 D:\Git\Shoping Companion\ShopCompanion.API\ShopCompanion.API\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll
-D:\Git\Shoping Companion\ShopCompanion.API\ShopCompanion.API\obj\Debug\netcoreapp3.1\ShopCompanion.API.csprojAssemblyReference.cache
 D:\Git\Shoping Companion\ShopCompanion.API\ShopCompanion.API\obj\Debug\netcoreapp3.1\ShopCompanion.API.AssemblyInfoInputs.cache
 D:\Git\Shoping Companion\ShopCompanion.API\ShopCompanion.API\obj\Debug\netcoreapp3.1\ShopCompanion.API.AssemblyInfo.cs
 D:\Git\Shoping Companion\ShopCompanion.API\ShopCompanion.API\obj\Debug\netcoreapp3.1\ShopCompanion.API.csproj.CoreCompileInputs.cache
@@ -74,3 +73,4 @@ D:\Git\Shoping Companion\ShopCompanion.API\ShopCompanion.API\obj\Debug\netcoreap
 D:\Git\Shoping Companion\ShopCompanion.API\ShopCompanion.API\obj\Debug\netcoreapp3.1\ShopCompanion.API.dll
 D:\Git\Shoping Companion\ShopCompanion.API\ShopCompanion.API\obj\Debug\netcoreapp3.1\ShopCompanion.API.pdb
 D:\Git\Shoping Companion\ShopCompanion.API\ShopCompanion.API\obj\Debug\netcoreapp3.1\ShopCompanion.API.genruntimeconfig.cache
+D:\Git\Shoping Companion\ShopCompanion.API\ShopCompanion.API\obj\Debug\netcoreapp3.1\ShopCompanion.API.csproj.AssemblyReference.cache
