@@ -7,12 +7,16 @@ import { GBook } from '../models/googleBook.model';
   providedIn: 'root'
 })
 export class BooksService {
-  private url = 'https://www.googleapis.com/books/v1/volumes?q=';
-  private url2 = 'https://www.googleapis.com/books/v1/volumes/xbEcAQAAIAAJ';
+  private urlGoogle = 'https://www.googleapis.com/books/v1/volumes?q=';
+  private urlAPI = 'https://localhost:44346/api/';
 
   constructor(private http: HttpClient) { }
 
-  public getBooks(bookName: string): Observable<GBook[]> {
-    return this.http.get<GBook[]>(this.url + bookName);
+  public getBooksFromGoogle(bookName: string): Observable<GBook[]> {
+    return this.http.get<GBook[]>(this.urlGoogle + bookName);
+  }
+
+  public getCategory() {
+    return this.http.get<string[]>(this.urlAPI + "GetCategory");
   }
 }

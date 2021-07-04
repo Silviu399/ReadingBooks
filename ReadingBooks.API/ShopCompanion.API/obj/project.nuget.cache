@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "fGfWUowQPNwKxp5Kk1YB0GBXustmUW24STkOToRfHc+L5weFThwg/0mAf0WJh8q0r3mDsRooWC0imSKqkoT82Q==",
+  "dgSpecHash": "xAgf3dDv5QNmDhyTGMWny+2PQeurkSn8fpRp/LAWor80CTZOvxhg7/jLmt+FbXWVCd+DTkjicoyhgkaqez/9xQ==",
   "success": true,
-  "projectFilePath": "D:\\Git\\Shoping Companion\\ShopCompanion.API\\ShopCompanion.API\\ShopCompanion.API.csproj",
+  "projectFilePath": "D:\\Git\\ReadingBooks\\ReadingBooks.API\\ShopCompanion.API\\ShopCompanion.API.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Lavy\\.nuget\\packages\\dapper\\2.0.78\\dapper.2.0.78.nupkg.sha512",
     "C:\\Users\\Lavy\\.nuget\\packages\\microsoft.netcore.platforms\\3.1.0\\microsoft.netcore.platforms.3.1.0.nupkg.sha512",

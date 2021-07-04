@@ -9,6 +9,7 @@ import { Book } from 'src/app/models/book.model';
   styleUrls: ['./add-book-dialog.component.scss'],
 })
 export class AddBookDialogComponent {
+  public categorii: string = "";
   constructor(
     public dialogRef: MatDialogRef<AddBookDialogComponent>,
     @Inject(MAT_DIALOG_DATA) public data: Book
@@ -19,6 +20,6 @@ export class AddBookDialogComponent {
   }
 
   addBook() {
-    alert('Test');
+    alert(this.categorii);
   }
 }

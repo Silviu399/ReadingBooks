@@ -74,3 +74,31 @@ D:\Git\Shoping Companion\ShopCompanion.API\ShopCompanion.API\obj\Debug\netcoreap
 D:\Git\Shoping Companion\ShopCompanion.API\ShopCompanion.API\obj\Debug\netcoreapp3.1\ShopCompanion.API.pdb
 D:\Git\Shoping Companion\ShopCompanion.API\ShopCompanion.API\obj\Debug\netcoreapp3.1\ShopCompanion.API.genruntimeconfig.cache
 D:\Git\Shoping Companion\ShopCompanion.API\ShopCompanion.API\obj\Debug\netcoreapp3.1\ShopCompanion.API.csproj.AssemblyReference.cache
+D:\Git\ReadingBooks\ReadingBooks.API\ShopCompanion.API\bin\Debug\netcoreapp3.1\appsettings.Development.json
+D:\Git\ReadingBooks\ReadingBooks.API\ShopCompanion.API\bin\Debug\netcoreapp3.1\appsettings.json
+D:\Git\ReadingBooks\ReadingBooks.API\ShopCompanion.API\bin\Debug\netcoreapp3.1\ShopCompanion.API.exe
+D:\Git\ReadingBooks\ReadingBooks.API\ShopCompanion.API\bin\Debug\netcoreapp3.1\ShopCompanion.API.deps.json
+D:\Git\ReadingBooks\ReadingBooks.API\ShopCompanion.API\bin\Debug\netcoreapp3.1\ShopCompanion.API.runtimeconfig.json
+D:\Git\ReadingBooks\ReadingBooks.API\ShopCompanion.API\bin\Debug\netcoreapp3.1\ShopCompanion.API.runtimeconfig.dev.json
+D:\Git\ReadingBooks\ReadingBooks.API\ShopCompanion.API\bin\Debug\netcoreapp3.1\ShopCompanion.API.dll
+D:\Git\ReadingBooks\ReadingBooks.API\ShopCompanion.API\bin\Debug\netcoreapp3.1\ShopCompanion.API.pdb
+D:\Git\ReadingBooks\ReadingBooks.API\ShopCompanion.API\bin\Debug\netcoreapp3.1\Dapper.dll
+D:\Git\ReadingBooks\ReadingBooks.API\ShopCompanion.API\bin\Debug\netcoreapp3.1\System.Data.SqlClient.dll
+D:\Git\ReadingBooks\ReadingBooks.API\ShopCompanion.API\bin\Debug\netcoreapp3.1\runtimes\win-arm64\native\sni.dll
+D:\Git\ReadingBooks\ReadingBooks.API\ShopCompanion.API\bin\Debug\netcoreapp3.1\runtimes\win-x64\native\sni.dll
+D:\Git\ReadingBooks\ReadingBooks.API\ShopCompanion.API\bin\Debug\netcoreapp3.1\runtimes\win-x86\native\sni.dll
+D:\Git\ReadingBooks\ReadingBooks.API\ShopCompanion.API\bin\Debug\netcoreapp3.1\runtimes\unix\lib\netcoreapp2.1\System.Data.SqlClient.dll
+D:\Git\ReadingBooks\ReadingBooks.API\ShopCompanion.API\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll
+D:\Git\ReadingBooks\ReadingBooks.API\ShopCompanion.API\obj\Debug\netcoreapp3.1\ShopCompanion.API.csproj.AssemblyReference.cache
+D:\Git\ReadingBooks\ReadingBooks.API\ShopCompanion.API\obj\Debug\netcoreapp3.1\ShopCompanion.API.AssemblyInfoInputs.cache
+D:\Git\ReadingBooks\ReadingBooks.API\ShopCompanion.API\obj\Debug\netcoreapp3.1\ShopCompanion.API.AssemblyInfo.cs
+D:\Git\ReadingBooks\ReadingBooks.API\ShopCompanion.API\obj\Debug\netcoreapp3.1\ShopCompanion.API.csproj.CoreCompileInputs.cache
+D:\Git\ReadingBooks\ReadingBooks.API\ShopCompanion.API\obj\Debug\netcoreapp3.1\ShopCompanion.API.MvcApplicationPartsAssemblyInfo.cache
+D:\Git\ReadingBooks\ReadingBooks.API\ShopCompanion.API\obj\Debug\netcoreapp3.1\staticwebassets\ShopCompanion.API.StaticWebAssets.Manifest.cache
+D:\Git\ReadingBooks\ReadingBooks.API\ShopCompanion.API\obj\Debug\netcoreapp3.1\staticwebassets\ShopCompanion.API.StaticWebAssets.xml
+D:\Git\ReadingBooks\ReadingBooks.API\ShopCompanion.API\obj\Debug\netcoreapp3.1\scopedcss\bundle\ShopCompanion.API.styles.css
+D:\Git\ReadingBooks\ReadingBooks.API\ShopCompanion.API\obj\Debug\netcoreapp3.1\ShopCompanion.API.RazorTargetAssemblyInfo.cache
+D:\Git\ReadingBooks\ReadingBooks.API\ShopCompanion.API\obj\Debug\netcoreapp3.1\ShopCompanion.API.csproj.CopyComplete
+D:\Git\ReadingBooks\ReadingBooks.API\ShopCompanion.API\obj\Debug\netcoreapp3.1\ShopCompanion.API.dll
+D:\Git\ReadingBooks\ReadingBooks.API\ShopCompanion.API\obj\Debug\netcoreapp3.1\ShopCompanion.API.pdb
+D:\Git\ReadingBooks\ReadingBooks.API\ShopCompanion.API\obj\Debug\netcoreapp3.1\ShopCompanion.API.genruntimeconfig.cache

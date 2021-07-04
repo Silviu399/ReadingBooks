@@ -557,11 +557,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Git\\Shoping Companion\\ShopCompanion.API\\ShopCompanion.API\\ShopCompanion.API.csproj",
+      "projectUniqueName": "D:\\Git\\ReadingBooks\\ReadingBooks.API\\ShopCompanion.API\\ShopCompanion.API.csproj",
       "projectName": "ShopCompanion.API",
-      "projectPath": "D:\\Git\\Shoping Companion\\ShopCompanion.API\\ShopCompanion.API\\ShopCompanion.API.csproj",
+      "projectPath": "D:\\Git\\ReadingBooks\\ReadingBooks.API\\ShopCompanion.API\\ShopCompanion.API.csproj",
       "packagesPath": "C:\\Users\\Lavy\\.nuget\\packages\\",
-      "outputPath": "D:\\Git\\Shoping Companion\\ShopCompanion.API\\ShopCompanion.API\\obj\\",
+      "outputPath": "D:\\Git\\ReadingBooks\\ReadingBooks.API\\ShopCompanion.API\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"

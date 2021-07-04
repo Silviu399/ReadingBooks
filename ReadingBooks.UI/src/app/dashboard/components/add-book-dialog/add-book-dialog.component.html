@@ -1,4 +1,10 @@
 <h3 mat-dialog-title>Buna, vrei sa adaugi cartea {{ data.title }}?</h3>
+<mat-form-field appearance="fill">
+  <mat-label>Alege genul cartii</mat-label>
+  <mat-select [(ngModel)]="categorii">
+    <mat-option value="option1">Clear</mat-option>
+  </mat-select>
+</mat-form-field>
 <div mat-dialog-actions class="buttons-right">
   <button mat-button (click)="onNoClick()">Inchide</button>
   <button mat-raised-button (click)="addBook()" color="primary">Adauga</button>

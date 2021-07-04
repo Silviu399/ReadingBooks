@@ -1,30 +1,32 @@
-import { HttpClient } from '@angular/common/http';
 import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 import { Book } from '../models/book.model';
-import { BooksService } from '../services/books.service';
 import { MatDialog } from '@angular/material/dialog';
 import { AddBookDialogComponent } from '../dashboard/components/add-book-dialog/add-book-dialog.component';
+import { BooksService } from '../services/books.service';
 
 @Component({
   selector: 'app-dummy',
   templateUrl: './dummy.component.html',
   styleUrls: ['./dummy.component.scss'],
 })
-export class DummyComponent {
+export class DummyComponent implements OnInit {
   @ViewChild('bookName', { read: ElementRef }) bookName: ElementRef;
 
   public books: Book[] = [];
+  public categories: string[] = [];
 
-  constructor(
-    private http: HttpClient,
-    private _bookService: BooksService,
-    private dialog: MatDialog
-  ) {}
+  constructor(private _bookService: BooksService, private dialog: MatDialog) {}
+
+  ngOnInit(): void {
+    this._bookService.getCategory().subscribe((data)=>{
+      console.log(data);
+    });
+  }
 
   getBooks() {
     this.books = [];
     this._bookService
-      .getBooks(this.bookName.nativeElement.value)
+      .getBooksFromGoogle(this.bookName.nativeElement.value)
       .subscribe((data) => {
         data['items'].forEach((item) => {
           const book: Book = {
