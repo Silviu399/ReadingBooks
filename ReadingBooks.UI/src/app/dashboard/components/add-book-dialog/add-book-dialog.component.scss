@@ -1,3 +1,8 @@
 .buttons-right {
   justify-content: flex-end;
 }
+
+.content {
+  display: flex;
+  flex-direction: column;
+}

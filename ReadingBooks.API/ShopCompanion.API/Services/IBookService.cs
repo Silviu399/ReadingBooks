@@ -10,5 +10,8 @@ namespace ShopCompanion.API.Services
     {
         int CreateBook(Book book);
         List<string> GetCategory();
+        List<Book> GetBooksWaiting(string userUid);
+        List<Book> GetBooksInReading(string userUid);
+        List<Book> GetBooksCompleted(string userUid);
     }
 }

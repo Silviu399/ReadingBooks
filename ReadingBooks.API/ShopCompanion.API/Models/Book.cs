@@ -14,6 +14,10 @@ namespace ShopCompanion.API.Models
         public string Categorii { get; set; }
         public int NrPag { get; set; }
         public int Progres { get; set; }
+        public int Percent 
+        {
+            get { return (Progres*100)/NrPag; }
+        }
 
         public Book(int id, string uidUser, string title, string autor, string categorii, int nrPag, int progres) 
         {

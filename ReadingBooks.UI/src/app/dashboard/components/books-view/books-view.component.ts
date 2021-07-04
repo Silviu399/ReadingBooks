@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
 import { Book } from 'src/app/models/book.model';
 import { AddPagesDialogComponent } from '../add-pages-dialog/add-pages-dialog.component';
@@ -9,22 +9,8 @@ import { AddPagesDialogComponent } from '../add-pages-dialog/add-pages-dialog.co
   styleUrls: ['./books-view.component.scss'],
 })
 export class BooksViewComponent {
-  books: Book[] = [
-    {
-      title: 'Amintiri',
-      autor: 'Ion Creanga',
-      categorii: 'aventura',
-      nrPag: 287,
-      progres: 72,
-    },
-    {
-      title: 'Camioane',
-      autor: 'Eminescu',
-      categorii: 'copilarie',
-      nrPag: 390,
-      progres: 35,
-    },
-  ];
+  @Input() books: Book[];
+
   constructor(private dialog: MatDialog) {}
 
   openAddPagesDialog(book: Book) {

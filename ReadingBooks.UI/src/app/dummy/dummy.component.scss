@@ -1,14 +1,21 @@
 .search-container {
   padding: 15px;
 
-  form {
-    padding: 10px;
+  .search-form {
+    margin: auto;
+    width: 440px;
+
+    mat-form-field {
+      width: 350px;
+    }
 
     #cauta {
       margin-left: 10px;
     }
   }
   .listContainer {
-    width: 450px;
+    width: 750px;
+    margin: 24px auto;
+    background-color: #f0f0f0;
   }
 }

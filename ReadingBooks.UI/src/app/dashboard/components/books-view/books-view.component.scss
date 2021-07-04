@@ -1,7 +1,8 @@
-.mat-card {
-    margin: 12px;
-    background-color: rgb(240, 240, 240);
-  }
+.mat-card-container {
+  background-color: rgb(240, 240, 240);
+  width: 750px;
+  margin: 24px auto;
+}
 
 .spec-current-book {
   text-align: left;

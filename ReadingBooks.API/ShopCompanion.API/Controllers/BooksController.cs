@@ -35,5 +35,29 @@ namespace ShopCompanion.API.Controllers
             var result = _bookService.GetCategory();
             return result;
         }
+
+        [HttpGet]
+        [Route("GetBooksWaiting")]
+        public ActionResult<List<Book>> GetBooksWaiting(string userUid)
+        {
+            var result = _bookService.GetBooksWaiting(userUid);
+            return result;
+        }
+
+        [HttpGet]
+        [Route("GetBooksInReading")]
+        public ActionResult<List<Book>> GetBooksInReading(string userUid)
+        {
+            var result = _bookService.GetBooksInReading(userUid);
+            return result;
+        }
+
+        [HttpGet]
+        [Route("GetBooksCompleted")]
+        public ActionResult<List<Book>> GetBooksCompleted(string userUid)
+        {
+            var result = _bookService.GetBooksCompleted(userUid);
+            return result;
+        }
     }
 }

@@ -39,5 +39,35 @@ namespace ShopCompanion.API.Services
                 return numberOfRowAffected;
             }
         }
+
+        public List<Book> GetBooksWaiting(string userUid)
+        {
+            var sqlQuery = @$"SELECT * FROM Books WHERE UidUser = '{userUid}' And Progres=0";
+            using (IDbConnection connection = new SqlConnection(_configuration.GetConnectionString("LocalDB")))
+            {
+                var books = connection.Query<Book>(sqlQuery).ToList();
+                return books;
+            }
+        }
+
+        public List<Book> GetBooksInReading(string userUid)
+        {
+            var sqlQuery = @$"SELECT * FROM Books WHERE UidUser = '{userUid}' AND Progres!=0 AND NrPag != Progres";
+            using (IDbConnection connection = new SqlConnection(_configuration.GetConnectionString("LocalDB")))
+            {
+                var books = connection.Query<Book>(sqlQuery).ToList();
+                return books;
+            }
+        }
+
+        public List<Book> GetBooksCompleted(string userUid)
+        {
+            var sqlQuery = @$"SELECT * FROM Books WHERE UidUser = '{userUid}' AND NrPag = Progres";
+            using (IDbConnection connection = new SqlConnection(_configuration.GetConnectionString("LocalDB")))
+            {
+                var books = connection.Query<Book>(sqlQuery).ToList();
+                return books;
+            }
+        }
     }
 }

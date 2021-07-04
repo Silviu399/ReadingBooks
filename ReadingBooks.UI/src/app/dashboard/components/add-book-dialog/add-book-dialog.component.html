@@ -1,11 +1,32 @@
 <h3 mat-dialog-title>Buna, vrei sa adaugi cartea {{ data.title }}?</h3>
-<mat-form-field appearance="fill">
-  <mat-label>Alege genul cartii</mat-label>
-  <mat-select [(ngModel)]="categorii">
-    <mat-option value="option1">Clear</mat-option>
-  </mat-select>
-</mat-form-field>
+
+<div mat-dialog-content class="content">
+  <mat-form-field appearance="fill">
+    <mat-label>Autor</mat-label>
+    <input matInput [(ngModel)]="autor" />
+  </mat-form-field>
+  <mat-form-field appearance="fill">
+    <mat-label>Numar de pagini</mat-label>
+    <input matInput type="number" [(ngModel)]="nrPag" />
+  </mat-form-field>
+  <mat-form-field appearance="fill">
+    <mat-label>Alege genul cartii</mat-label>
+    <mat-select [(ngModel)]="category">
+      <mat-option *ngFor="let item of categories" value="{{ item }}">{{
+        item
+      }}</mat-option>
+    </mat-select>
+  </mat-form-field>
+</div>
+
 <div mat-dialog-actions class="buttons-right">
   <button mat-button (click)="onNoClick()">Inchide</button>
-  <button mat-raised-button (click)="addBook()" color="primary">Adauga</button>
+  <button
+    mat-raised-button
+    (click)="addBook()"
+    color="primary"
+    [disabled]="!category || nrPag == '0' || !nrPag || !autor"
+  >
+    Adauga
+  </button>
 </div>

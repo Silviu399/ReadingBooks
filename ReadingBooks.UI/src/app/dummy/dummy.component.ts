@@ -13,14 +13,10 @@ export class DummyComponent implements OnInit {
   @ViewChild('bookName', { read: ElementRef }) bookName: ElementRef;
 
   public books: Book[] = [];
-  public categories: string[] = [];
 
   constructor(private _bookService: BooksService, private dialog: MatDialog) {}
 
   ngOnInit(): void {
-    this._bookService.getCategory().subscribe((data)=>{
-      console.log(data);
-    });
   }
 
   getBooks() {

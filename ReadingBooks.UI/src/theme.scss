@@ -3,13 +3,13 @@
 @include mat-core();
 
 $my-theme-primary: mat-palette($mat-purple);
-$my-theme-accent:  mat-palette($mat-green, A200, A100, A400);
+$my-theme-accent:  mat-palette($mat-amber, A200, A100, A400);
 $my-theme-warn:    mat-palette($mat-red);
 
 $my-theme: mat-light-theme((color: (
     primary: $my-theme-primary,
     accent: $my-theme-accent,
-    warn: $my-theme-warn,  
+    warn: $my-theme-warn,
   )
 ));
 

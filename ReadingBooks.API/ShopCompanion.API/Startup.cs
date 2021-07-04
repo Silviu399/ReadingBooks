@@ -18,6 +18,10 @@ namespace ShopCompanion.API
         // For more information on how to configure your application, visit https://go.microsoft.com/fwlink/?LinkID=398940
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddCors(c =>
+            {
+                c.AddPolicy("AllowOrigin", options => options.AllowAnyOrigin());
+            });
             services.AddMvc(options => options.EnableEndpointRouting = false).
                 SetCompatibilityVersion(CompatibilityVersion.Version_3_0);
 
@@ -40,6 +44,10 @@ namespace ShopCompanion.API
             }
 
             app.UseHttpsRedirection();
+            app.UseCors(builder => builder.AllowAnyOrigin()
+                .AllowAnyMethod()
+                .AllowAnyHeader()
+            );
             app.UseMvc();
         }
     }

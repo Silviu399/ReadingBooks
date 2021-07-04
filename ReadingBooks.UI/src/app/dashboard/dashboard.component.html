@@ -1,6 +1,12 @@
-<mat-tab-group mat-align-tabs="start">
-  <mat-tab label="Carti in citire"><app-books-view></app-books-view></mat-tab>
-  <mat-tab label="Carti in asteptare">Content 2</mat-tab>
-  <mat-tab label="Carti finalizate">Content 4</mat-tab>
-  <mat-tab label="Adauga o carte"><app-dummy></app-dummy></mat-tab>
+<mat-tab-group mat-align-tabs="center">
+  <mat-tab label="Carti in citire">
+    <app-books-view [books]="booksInReading"></app-books-view>
+  </mat-tab>
+  <mat-tab label="Carti in asteptare">
+    <app-books-view [books]="booksWaiting"></app-books-view>
+  </mat-tab>
+  <mat-tab label="Carti finalizate">
+    <app-books-view [books]="booksCompleted"></app-books-view>
+  </mat-tab>
+  <mat-tab label="Adauga o carte in colectie"><app-dummy></app-dummy></mat-tab>
 </mat-tab-group>
