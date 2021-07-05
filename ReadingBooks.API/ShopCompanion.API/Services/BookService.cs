@@ -69,5 +69,17 @@ namespace ShopCompanion.API.Services
                 return books;
             }
         }
+
+        public int UpdateBook(Book book)
+        {
+            var sqlQuery = @$"UPDATE Books 
+                            SET Progres = {book.Progres}
+                            WHERE ID = {book.Id} AND UidUser = '{book.UidUser}'";
+            using (IDbConnection connection = new SqlConnection(_configuration.GetConnectionString("LocalDB")))
+            {
+                var numberOfRowAffected = connection.Execute(sqlQuery);
+                return numberOfRowAffected;
+            }
+        }
     }
 }

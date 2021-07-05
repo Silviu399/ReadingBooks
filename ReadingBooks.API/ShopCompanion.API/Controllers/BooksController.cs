@@ -59,5 +59,13 @@ namespace ShopCompanion.API.Controllers
             var result = _bookService.GetBooksCompleted(userUid);
             return result;
         }
+
+        [HttpPut]
+        [Route("UpdateBook")]
+        public ActionResult<int> UpdateBook(Book book)
+        {
+            var result = _bookService.UpdateBook(book);
+            return result;
+        }
     }
 }

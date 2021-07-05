@@ -13,5 +13,6 @@ namespace ShopCompanion.API.Services
         List<Book> GetBooksWaiting(string userUid);
         List<Book> GetBooksInReading(string userUid);
         List<Book> GetBooksCompleted(string userUid);
+        int UpdateBook(Book book);
     }
 }

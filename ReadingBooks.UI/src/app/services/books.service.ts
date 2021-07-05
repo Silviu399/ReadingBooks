@@ -1,7 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable, OnInit } from '@angular/core';
 import { Observable } from 'rxjs';
-import { Book, DbBook } from '../models/book.model';
+import { Book } from '../models/book.model';
 import { GBook } from '../models/googleBook.model';
 import { User } from '../models/user.model';
 
@@ -28,7 +28,7 @@ export class BooksService implements OnInit {
     return this.http.get<string[]>(this.urlAPI + 'GetCategory');
   }
 
-  public createBook(book: DbBook) {
+  public createBook(book: Book) {
     return this.http.post(this.urlAPI + 'CreateBook', book);
   }
 
@@ -42,5 +42,9 @@ export class BooksService implements OnInit {
 
   public getBooksCompleted(uid: string) {
     return this.http.get<Book[]>(this.urlAPI + 'GetBooksCompleted?userUid=' + uid);
+  }
+
+  public updateBook(book: Book) {
+    return this.http.put(this.urlAPI + 'UpdateBook', book);
   }
 }

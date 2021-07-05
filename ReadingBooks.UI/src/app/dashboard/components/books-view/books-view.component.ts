@@ -14,8 +14,10 @@ export class BooksViewComponent {
   constructor(private dialog: MatDialog) {}
 
   openAddPagesDialog(book: Book) {
-    this.dialog.open(AddPagesDialogComponent, {
-      data: book,
-    });
+    if (book.nrPag != book.progres) {
+      this.dialog.open(AddPagesDialogComponent, {
+        data: book,
+      });
+    }
   }
 }

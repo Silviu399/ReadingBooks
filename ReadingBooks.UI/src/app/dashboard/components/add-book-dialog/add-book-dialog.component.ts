@@ -1,7 +1,7 @@
 import { Inject, OnInit } from '@angular/core';
 import { Component } from '@angular/core';
 import { MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
-import { Book, DbBook } from 'src/app/models/book.model';
+import { Book } from 'src/app/models/book.model';
 import { User } from 'src/app/models/user.model';
 import { BooksService } from 'src/app/services/books.service';
 
@@ -38,7 +38,8 @@ export class AddBookDialogComponent implements OnInit  {
   }
 
   addBook() {
-    let book: DbBook = {
+    let book: Book = {
+      id: this.data.id,
       title: this.data.title,
       nrPag: Number.parseInt(this.nrPag),
       autor: this.autor,

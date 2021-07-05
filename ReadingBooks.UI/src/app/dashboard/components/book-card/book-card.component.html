@@ -6,7 +6,7 @@
     </div>
     <div>
       <mat-card-subtitle>{{book.categorii}}</mat-card-subtitle>
-      <mat-card-subtitle *ngIf="book.nrPag!=0" class="nr-pag">{{book.nrPag}} pag</mat-card-subtitle>
+      <mat-card-subtitle *ngIf="book.nrPag!=0" class="nr-pag">{{book.progres}}/{{book.nrPag}} pag</mat-card-subtitle>
     </div>
   </div>
     <mat-progress-bar mode="determinate" value="{{book.percent}}"></mat-progress-bar>

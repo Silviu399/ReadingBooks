@@ -2,10 +2,10 @@
 <div mat-dialog-content>
   <mat-form-field>
     <mat-label>Numarul de pagini</mat-label>
-    <input matInput [(ngModel)]="nrPagini" />
+    <input type="number" matInput [(ngModel)]="nrPagini" />
   </mat-form-field>
 </div>
 <div mat-dialog-actions>
   <button mat-button (click)="onNoClick()">Inchide</button>
-  <button mat-raised-button color="primary" (click)="addPages()">Adauga</button>
+  <button mat-raised-button color="primary" [disabled]="nrPagini==0 || !nrPagini" (click)="addPages()">Adauga</button>
 </div>
