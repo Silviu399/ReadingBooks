@@ -9,6 +9,7 @@ namespace ShopCompanion.API.Models
     {
         public int Id { get; set; }
         public string UserId { get; set; }
+        public string UserName { get; set; }
         public string Category { get; set; }
         public int CategoryLevel { get; set; }
         public int XpLevel { get; set; }
@@ -16,10 +17,11 @@ namespace ShopCompanion.API.Models
 
         CategoryProgress() { }
 
-        CategoryProgress(int id, string userId, string category, int categoryLevel, int xpLevel, int xpTotal)
+        CategoryProgress(int id, string userId, string userName, string category, int categoryLevel, int xpLevel, int xpTotal)
         {
             Id = id;
             UserId = userId;
+            UserName = userName;
             Category = category;
             CategoryLevel = categoryLevel;
             XpLevel = xpLevel;

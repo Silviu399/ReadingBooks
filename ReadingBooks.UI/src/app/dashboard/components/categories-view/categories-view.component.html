@@ -1,8 +1,14 @@
 <mat-card>
-  <div>
+  <div class="user-container">
     <div class="user-progress">
-      <h2>Nivel {{ userProgress.userLevel }}</h2>
-      <h2>{{ userProgress.xpLevel }}/{{ userProgress.userLevel * 25 }} XP</h2>
+      <div>
+        <mat-card-title>{{userProgress.userName}}</mat-card-title>
+        <mat-card-subtitle>Total: {{userProgress.xpTotal}} XP</mat-card-subtitle>
+      </div>
+      <div>
+        <mat-card-subtitle>Nivel {{ userProgress.userLevel }}</mat-card-subtitle>
+        <mat-card-subtitle> {{ userProgress.xpLevel }}/{{ userProgress.userLevel * 25 }} XP</mat-card-subtitle>
+      </div>
     </div>
     <mat-progress-bar
       mode="determinate"
