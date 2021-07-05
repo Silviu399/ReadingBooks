@@ -7,5 +7,5 @@
 </div>
 <div mat-dialog-actions>
   <button mat-button (click)="onNoClick()">Inchide</button>
-  <button mat-raised-button color="primary" [disabled]="nrPagini==0 || !nrPagini" (click)="addPages()">Adauga</button>
+  <button mat-raised-button color="primary" [disabled]="nrPagini<=0 || !nrPagini" (click)="addPages()">Adauga</button>
 </div>

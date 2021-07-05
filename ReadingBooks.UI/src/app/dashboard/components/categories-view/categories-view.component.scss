@@ -1,9 +1,18 @@
-:host{
-    width: 50%;
+:host {
+  width: 50%;
 }
 
 .mat-card {
-    margin: 24px auto;
-    width: 750px;
-    background-color: rgb(240, 240, 240);
+  margin: 24px auto;
+  width: 750px;
+  background-color: rgb(240, 240, 240);
+
+  .user-progress {
+    display: flex;
+    justify-content: space-between;
   }
+
+  .divider {
+    padding: 16px;
+  }
+}

@@ -8,17 +8,11 @@ import { User } from '../models/user.model';
 @Injectable({
   providedIn: 'root',
 })
-export class BooksService implements OnInit {
-  public userData: User;
+export class BooksService {
   private urlGoogle = 'https://www.googleapis.com/books/v1/volumes?q=';
   private urlAPI = 'https://localhost:44346/api/';
 
   constructor(private http: HttpClient) {}
-
-  ngOnInit(): void {
-    const stringUser = sessionStorage.getItem('user');
-    this.userData = JSON.parse(stringUser);
-  }
 
   public getBooksFromGoogle(bookName: string): Observable<GBook[]> {
     return this.http.get<GBook[]>(this.urlGoogle + bookName);

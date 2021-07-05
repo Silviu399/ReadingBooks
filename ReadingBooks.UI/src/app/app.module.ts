@@ -12,7 +12,7 @@ import { MatInputModule } from '@angular/material/input';
 import { MatTabsModule } from '@angular/material/tabs';
 import { MatDialogModule } from '@angular/material/dialog';
 import { MatSelectModule } from '@angular/material/select';
-import {MatDividerModule} from '@angular/material/divider';
+import { MatDividerModule } from '@angular/material/divider';
 
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -39,12 +39,12 @@ function firebaseAppNameFactory() {
 }
 
 const firebaseConfig = {
-  apiKey: "AIzaSyBEwqTIZAQP_6VkKT7Q2M7V4TG-FDE0jck",
-  authDomain: "readingbooks-b23d3.firebaseapp.com",
-  projectId: "readingbooks-b23d3",
-  storageBucket: "readingbooks-b23d3.appspot.com",
-  messagingSenderId: "642155826507",
-  appId: "1:642155826507:web:7e221e6872b23b62b36cce"
+  apiKey: 'AIzaSyBEwqTIZAQP_6VkKT7Q2M7V4TG-FDE0jck',
+  authDomain: 'readingbooks-b23d3.firebaseapp.com',
+  projectId: 'readingbooks-b23d3',
+  storageBucket: 'readingbooks-b23d3.appspot.com',
+  messagingSenderId: '642155826507',
+  appId: '1:642155826507:web:7e221e6872b23b62b36cce',
 };
 
 @NgModule({
@@ -80,10 +80,11 @@ const firebaseConfig = {
     AngularFireModule.initializeApp(firebaseConfig),
     AngularFirestoreModule, // firestore
     AngularFireAuthModule, // auth
-    AngularFireStorageModule, NgxAuthFirebaseUIModule.forRoot(firebaseConfig, firebaseAppNameFactory, {
+    AngularFireStorageModule,
+    NgxAuthFirebaseUIModule.forRoot(firebaseConfig, firebaseAppNameFactory, {
       authGuardFallbackURL: '/login',
       authGuardLoggedInURL: '/carti',
-    }) // storage
+    }), // storage
   ],
   providers: [],
   bootstrap: [AppComponent],

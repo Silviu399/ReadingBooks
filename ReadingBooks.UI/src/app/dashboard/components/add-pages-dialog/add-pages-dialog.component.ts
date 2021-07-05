@@ -27,7 +27,7 @@ export class AddPagesDialogComponent {
   addPages() {
     if (this.book.progres + this.nrPagini > this.book.nrPag) {
       alert(
-        'Asigurate ca numarul introdus nu este mai mare decat numarul total de pagini al cartii.'
+        'Asigura-te ca numarul introdus nu este mai mare decat numarul total de pagini al cartii.'
       );
       this.nrPagini = 0;
     } else {

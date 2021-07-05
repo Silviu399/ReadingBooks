@@ -1,8 +1,20 @@
 <mat-card>
-    <div>
-        <h2>UserMainLevel</h2>
-        <mat-progress-bar mode="determinate" value="30"></mat-progress-bar>
-        <hr />
+  <div>
+    <div class="user-progress">
+      <h2>Nivel {{ userProgress.userLevel }}</h2>
+      <h2>{{ userProgress.xpLevel }}/{{ userProgress.userLevel * 25 }} XP</h2>
     </div>
-    <app-category-card *ngFor="let category of categories" [category]="category"></app-category-card>
+    <mat-progress-bar
+      mode="determinate"
+      value="{{ (userProgress.xpLevel * 100) / (userProgress.userLevel * 25) }}"
+    ></mat-progress-bar>
+
+    <div class="divider">
+      <mat-divider></mat-divider>
+    </div>
+  </div>
+  <app-category-card
+    *ngFor="let category of categoryProgress"
+    [category]="category"
+  ></app-category-card>
 </mat-card>

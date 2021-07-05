@@ -1,4 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { CategoryProgress } from 'src/app/models/category-progress.model';
 import { Category } from 'src/app/models/category.model';
 
 @Component({
@@ -7,7 +8,7 @@ import { Category } from 'src/app/models/category.model';
   styleUrls: ['./category-card.component.scss']
 })
 export class CategoryCardComponent implements OnInit {
-  @Input() category: Category;
+  @Input() category: CategoryProgress;
   constructor() { }
 
   ngOnInit(): void {
