@@ -20,6 +20,6 @@ export class LoginComponent {
     }
     const jsonUser = JSON.stringify(user);
     sessionStorage.setItem('user', jsonUser);
-    this.route.navigate(['/carti']);
+    this.route.navigate(['/biblioteca']);
   }
 }

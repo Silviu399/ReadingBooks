@@ -1,6 +1,11 @@
-.spacer{
-    flex: 1 1 auto;
+.spacer {
+  flex: 1 1 auto;
 }
-.icon{
-    margin: 5px;
+
+.icon {
+  margin: 5px;
+}
+
+ngx-auth-firebaseui-avatar {
+  padding: 0 16px 0 16px;
 }

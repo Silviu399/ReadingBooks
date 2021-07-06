@@ -5,9 +5,11 @@ import { LoginComponent } from './login/login.component';
 import { CategoriesViewComponent } from './dashboard/components/categories-view/categories-view.component';
 
 import {LoggedInGuard} from 'ngx-auth-firebaseui';
+import { ReportsComponent } from './reports/reports.component';
 const routes: Routes = [
-  { path: 'carti', component: DashboardComponent, canActivate: [LoggedInGuard]},
+  { path: 'biblioteca', component: DashboardComponent, canActivate: [LoggedInGuard]},
   { path: 'progres', component: CategoriesViewComponent, canActivate: [LoggedInGuard]},
+  { path: 'rapoarte', component: ReportsComponent, canActivate: [LoggedInGuard]},
   { path: 'login', component: LoginComponent }
 ];
 

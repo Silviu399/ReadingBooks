@@ -13,6 +13,8 @@ import { MatTabsModule } from '@angular/material/tabs';
 import { MatDialogModule } from '@angular/material/dialog';
 import { MatSelectModule } from '@angular/material/select';
 import { MatDividerModule } from '@angular/material/divider';
+import { MatTableModule } from '@angular/material/table';
+import { MatSortModule } from '@angular/material/sort';
 
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -33,6 +35,8 @@ import { AngularFirestoreModule } from '@angular/fire/firestore';
 import { AngularFireStorageModule } from '@angular/fire/storage';
 import { AngularFireAuthModule } from '@angular/fire/auth';
 import { NgxAuthFirebaseUIModule } from 'ngx-auth-firebaseui';
+import { ReportsComponent } from './reports/reports.component';
+import { TableComponent } from './reports/components/table/table.component';
 
 function firebaseAppNameFactory() {
   return 'my-app';
@@ -60,6 +64,8 @@ const firebaseConfig = {
     CategoryCardComponent,
     AddBookDialogComponent,
     AddPagesDialogComponent,
+    ReportsComponent,
+    TableComponent,
   ],
   imports: [
     BrowserModule,
@@ -76,6 +82,8 @@ const firebaseConfig = {
     MatDialogModule,
     MatSelectModule,
     MatDividerModule,
+    MatTableModule,
+    MatSortModule,
     HttpClientModule,
     AngularFireModule.initializeApp(firebaseConfig),
     AngularFirestoreModule, // firestore
