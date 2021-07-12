@@ -62,9 +62,9 @@ namespace ShopCompanion.API.Controllers
 
         [HttpPut]
         [Route("UpdateBook")]
-        public ActionResult<int> UpdateBook(Book book)
+        public ActionResult<int> UpdateBook(Book book, int numberPages, string userName)
         {
-            var result = _bookService.UpdateBook(book);
+            var result = _bookService.UpdateBook(book, numberPages, userName);
             return result;
         }
     }

@@ -38,7 +38,7 @@ export class BooksService {
     return this.http.get<Book[]>(this.urlAPI + 'GetBooksCompleted?userUid=' + uid);
   }
 
-  public updateBook(book: Book) {
-    return this.http.put(this.urlAPI + 'UpdateBook', book);
+  public updateBook(book: Book, numberPages: number, userName: string) {
+    return this.http.put(this.urlAPI + 'UpdateBook?numberPages=' + numberPages + '&userName=' + userName, book);
   }
 }

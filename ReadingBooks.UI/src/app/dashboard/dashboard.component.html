@@ -1,12 +1,36 @@
 <mat-tab-group mat-align-tabs="center">
   <mat-tab label="Carti in citire">
-    <app-books-view [books]="booksInReading"></app-books-view>
+    <div
+      class="empty-container longLength"
+      *ngIf="booksInReading.length == 0; else reading"
+    >
+      <h3>Adauga pagini citite la una din cartile din lista de asteptare</h3>
+    </div>
+
+    <ng-template #reading>
+      <app-books-view [books]="booksInReading"></app-books-view>
+    </ng-template>
   </mat-tab>
   <mat-tab label="Carti in asteptare">
-    <app-books-view [books]="booksWaiting"></app-books-view>
+    <div class="empty-container" *ngIf="booksWaiting.length == 0; else waiting">
+      <h3>Adauga o carte</h3>
+    </div>
+
+    <ng-template #waiting>
+      <app-books-view [books]="booksWaiting"></app-books-view>
+    </ng-template>
   </mat-tab>
   <mat-tab label="Carti finalizate">
-    <app-books-view [books]="booksCompleted"></app-books-view>
+    <div
+      class="empty-container"
+      *ngIf="booksCompleted.length == 0; else completed"
+    >
+      <h3>Termina prima carte</h3>
+    </div>
+
+    <ng-template #completed>
+      <app-books-view [books]="booksCompleted"></app-books-view>
+    </ng-template>
   </mat-tab>
   <mat-tab label="Adauga o carte in colectie"><app-dummy></app-dummy></mat-tab>
 </mat-tab-group>

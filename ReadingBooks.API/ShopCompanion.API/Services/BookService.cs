@@ -70,14 +70,56 @@ namespace ShopCompanion.API.Services
             }
         }
 
-        public int UpdateBook(Book book)
+        public int UpdateBook(Book book, int numberPages, string userName)
         {
-            var sqlQuery = @$"UPDATE Books 
+            var sqlQueryUserProgress = @$"
+BEGIN
+	IF NOT EXISTS(SELECT * FROM UserProgress WHERE UserId = '{book.UidUser}')
+	BEGIN
+		INSERT INTO UserProgress
+		VALUES ('{book.UidUser}', 1, 0, 0, '{userName}') 
+	END
+
+    UPDATE UserProgress 
+	SET XPLevel += {numberPages}, XpTotal += {numberPages}
+	WHERE UserId = '{book.UidUser}'
+
+	IF EXISTS(SELECT * FROM UserProgress WHERE UserId = '{book.UidUser}' AND UserLevel*25<XpLevel)
+	BEGIN
+	   UPDATE UserProgress 
+		SET XPLevel -= UserLevel*25, UserLevel+= 1
+		WHERE UserId = '{book.UidUser}'
+	END
+
+    IF NOT EXISTS(SELECT * FROM CategoryProgress WHERE UserId = '{book.UidUser}' AND Category = '{book.Categorii}')
+	BEGIN
+		INSERT INTO CategoryProgress
+		VALUES ('{book.UidUser}', '{book.Categorii}', 1, 0, 0, '{userName}') 
+	END
+
+    UPDATE CategoryProgress 
+	SET XPLevel += {numberPages}, XpTotal += {numberPages}
+	WHERE UserId = '{book.UidUser}' AND Category='{book.Categorii}'
+
+	IF EXISTS(SELECT * FROM CategoryProgress WHERE UserId = '{book.UidUser}' AND Category='{book.Categorii}' AND CategoryLevel*25<XpLevel)
+	BEGIN
+	   UPDATE CategoryProgress 
+		SET XPLevel -= CategoryLevel*25, CategoryLevel+= 1
+		WHERE UserId = '{book.UidUser}' AND Category='{book.Categorii}'
+	END
+END";
+
+
+            var sqlQueryUpdateBook = @$"UPDATE Books 
                             SET Progres = {book.Progres}
                             WHERE ID = {book.Id} AND UidUser = '{book.UidUser}'";
             using (IDbConnection connection = new SqlConnection(_configuration.GetConnectionString("LocalDB")))
             {
-                var numberOfRowAffected = connection.Execute(sqlQuery);
+                var numberOfRowAffected = 0;
+
+                numberOfRowAffected += connection.Execute(sqlQueryUserProgress);
+
+                numberOfRowAffected += connection.Execute(sqlQueryUpdateBook);
                 return numberOfRowAffected;
             }
         }

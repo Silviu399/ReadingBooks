@@ -1,6 +1,7 @@
 import { Component, Inject } from '@angular/core';
 import { MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
 import { Book } from 'src/app/models/book.model';
+import { User } from 'src/app/models/user.model';
 import { BooksService } from 'src/app/services/books.service';
 
 @Component({
@@ -31,8 +32,10 @@ export class AddPagesDialogComponent {
       );
       this.nrPagini = 0;
     } else {
+      const stringUser = sessionStorage.getItem('user');
+      const userData: User = JSON.parse(stringUser);
       this.book.progres += this.nrPagini;
-      this._booksService.updateBook(this.book).subscribe(() => {
+      this._booksService.updateBook(this.book, this.nrPagini, userData.displayName).subscribe(() => {
         location.reload();
       });
     }
