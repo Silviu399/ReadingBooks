@@ -14,6 +14,7 @@ namespace ShopCompanion.API.Models
         public string Categorii { get; set; }
         public int NrPag { get; set; }
         public int Progres { get; set; }
+        public string UserName { get; set; }
         public int Percent 
         {
             get { return (Progres*100)/NrPag; }

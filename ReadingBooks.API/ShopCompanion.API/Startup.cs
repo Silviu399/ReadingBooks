@@ -30,6 +30,7 @@ namespace ShopCompanion.API
             services.AddSingleton<IUserService, UserService>();
             services.AddSingleton<IBookService, BookService>();
             services.AddSingleton<IProgressService, ProgressService>();
+            services.AddSingleton<IReportsService, ReportsService>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

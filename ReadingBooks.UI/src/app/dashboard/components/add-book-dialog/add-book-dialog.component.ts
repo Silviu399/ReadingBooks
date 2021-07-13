@@ -45,7 +45,8 @@ export class AddBookDialogComponent implements OnInit  {
       autor: this.autor,
       categorii: this.category,
       progres: 0,
-      uidUser: this.userData.uid
+      uidUser: this.userData.uid,
+      userName: this.userData.displayName
     }
     this._bookService.createBook(book).subscribe(() => {
       this.dialogRef.close();

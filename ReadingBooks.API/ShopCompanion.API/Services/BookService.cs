@@ -22,7 +22,7 @@ namespace ShopCompanion.API.Services
         public int CreateBook(Book book)
         {
             var sqlQuery = @$"INSERT INTO Books
-                            VALUES (@uiduser, @title, @autor, @categorii, @nrPag, @progres)";
+                            VALUES (@uiduser, @title, @autor, @categorii, @nrPag, @progres, @userName)";
             using (IDbConnection connection = new SqlConnection(_configuration.GetConnectionString("LocalDB")))
             {
                 var numberOfRowAffected = connection.Execute(sqlQuery, book);

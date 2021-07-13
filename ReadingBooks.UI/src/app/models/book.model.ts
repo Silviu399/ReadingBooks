@@ -7,4 +7,5 @@ export interface Book {
   progres: number;
   percent?: number;
   uidUser?: string;
+  userName?: string;
 }
