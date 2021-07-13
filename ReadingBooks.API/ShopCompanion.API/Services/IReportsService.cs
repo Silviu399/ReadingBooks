@@ -10,6 +10,7 @@ namespace ShopCompanion.API.Services
     {
         List<ReadersByXP> GetReadersByXP();
         List<ReadersWithMostBooksFinished> GetReadersWithMostBooksFinished();
+        List<TopReadersPerCategory> GetTopReadersPerCategory();
         List<CategoryWithNumberOfBooksFinalized> GetCategorysByNumberOfBooksFinalized();
         List<BooksWithNbPages> GetBooksByNbPages();
     }

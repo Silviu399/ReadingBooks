@@ -37,10 +37,28 @@ namespace ShopCompanion.API.Services
                             From Books
                             WHERE NrPag = Progres
                             Group by UidUser, UserName
-                            Order by BooksFinalized";
+                            Order by BooksFinalized DESC";
             using (IDbConnection connection = new SqlConnection(_configuration.GetConnectionString("LocalDB")))
             {
                 var result = connection.Query<ReadersWithMostBooksFinished>(sqlQuery).ToList();
+                return result;
+            }
+        }
+
+        public List<TopReadersPerCategory> GetTopReadersPerCategory()
+        {
+            var sqlQuery = @$"SELECT TOP 10 ROW_NUMBER() OVER(ORDER BY (SELECT 1)) AS Position, UserName, Category, CategoryProgress.XPTotal 
+                            FROM CategoryProgress 
+                            JOIN (
+	                            Select Max(XPTotal) AS TOTAL 
+	                            From CategoryProgress 
+	                            Group by Category
+	                            ) AS A 
+                            ON A.TOTAL = CategoryProgress.XPTotal
+                            ORDER BY XpTotal DESC";
+            using (IDbConnection connection = new SqlConnection(_configuration.GetConnectionString("LocalDB")))
+            {
+                var result = connection.Query<TopReadersPerCategory>(sqlQuery).ToList();
                 return result;
             }
         }

@@ -37,6 +37,14 @@ namespace ShopCompanion.API.Controllers
         }
 
         [HttpGet]
+        [Route("GetTopReadersPerCategory")]
+        public ActionResult<List<TopReadersPerCategory>> GetTopReadersPerCategory()
+        {
+            var result = _reportsService.GetTopReadersPerCategory();
+            return result;
+        }
+
+        [HttpGet]
         [Route("GetCategorysByNumberOfBooksFinalized")]
         public ActionResult<List<CategoryWithNumberOfBooksFinalized>> GetCategorysByNumberOfBooksFinalized()
         {
@@ -51,21 +59,5 @@ namespace ShopCompanion.API.Controllers
             var result = _reportsService.GetBooksByNbPages();
             return result;
         }
-
-        //[HttpGet]
-        //[Route("CreateReports")]
-        //public ActionResult<int> CreateReports(Reports reports)
-        //{
-        //    var result = _reportsService.CreateReports(reports);
-        //    return result;
-        //}
-
-        //[HttpGet]
-        //[Route("CreateReports")]
-        //public ActionResult<int> CreateReports(Reports reports)
-        //{
-        //    var result = _reportsService.CreateReports(reports);
-        //    return result;
-        //}
     }
 }
