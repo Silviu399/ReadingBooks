@@ -7,11 +7,14 @@ import { FirebaseService } from '../services/firebase.service';
   templateUrl: './navbar.component.html',
   styleUrls: ['./navbar.component.scss'],
 })
-export class NavbarComponent {
-  constructor(public route: Router, private firebaseService: FirebaseService) {}
+export class NavbarComponent implements OnInit {
+  public isAdmin: boolean = false;
 
-  public isAdmin() {
-    return this.firebaseService.isAdmin();
+  constructor(public route: Router, private firebaseService: FirebaseService) {
+  }
+
+  ngOnInit(): void {
+    this.isAdmin = this.firebaseService.isAdmin();
   }
 
   public toLogin() {

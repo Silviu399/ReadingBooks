@@ -6,7 +6,7 @@
 
   <a mat-button routerLink="biblioteca">Biblioteca mea</a>
   <a mat-button routerLink="progres">Progres</a>
-  <a mat-button *ngIf="isAdmin()" routerLink="rapoarte">Rapoarte</a>
+  <a mat-button *ngIf="isAdmin" routerLink="rapoarte">Rapoarte</a>
 
   <ngx-auth-firebaseui-avatar
     (onSignOut)="toLogin()"
