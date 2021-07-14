@@ -25,9 +25,6 @@ namespace ShopCompanion.API
             services.AddMvc(options => options.EnableEndpointRouting = false).
                 SetCompatibilityVersion(CompatibilityVersion.Version_3_0);
 
-            services.AddSingleton<IProductService, ProductService>();
-            services.AddSingleton<IReviewService, ReviewService>();
-            services.AddSingleton<IUserService, UserService>();
             services.AddSingleton<IBookService, BookService>();
             services.AddSingleton<IProgressService, ProgressService>();
             services.AddSingleton<IReportsService, ReportsService>();
