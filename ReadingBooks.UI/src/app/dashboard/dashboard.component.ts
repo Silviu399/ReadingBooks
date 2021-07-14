@@ -9,14 +9,15 @@ import { BooksService } from '../services/books.service';
   styleUrls: ['./dashboard.component.scss'],
 })
 export class DashboardComponent implements OnInit {
-  public booksWaiting: Book[];
-  public booksInReading: Book[];
-  public booksCompleted: Book[];
+  public booksWaiting: Book[] = [];
+  public booksInReading: Book[] = [];
+  public booksCompleted: Book[] = [];
 
-  constructor(private bookService: BooksService) {}
+  constructor(private bookService: BooksService) {
+    this.getData();
+  }
 
   ngOnInit(): void {
-    this.getData();
   }
 
   public getData() {

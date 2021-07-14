@@ -2,6 +2,7 @@ import { JsonpClientBackend } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { User } from '../models/user.model';
+import { FirebaseService } from '../services/firebase.service';
 
 @Component({
   selector: 'app-login',
@@ -9,17 +10,10 @@ import { User } from '../models/user.model';
   styleUrls: ['./login.component.scss'],
 })
 export class LoginComponent {
-  constructor(public route: Router) {}
+  constructor(public route: Router, private firebaseService: FirebaseService) {}
 
   public toBooks(event) {
-    const user: User = {
-      uid: event.uid,
-      displayName: event.displayName,
-      email: event.email,
-      photoURL: event.photoURL
-    }
-    const jsonUser = JSON.stringify(user);
-    sessionStorage.setItem('user', jsonUser);
+    this.firebaseService.getUserData(event.uid);
     this.route.navigate(['/biblioteca']);
   }
 }
