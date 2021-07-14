@@ -1,21 +1,21 @@
 <mat-tab-group mat-align-tabs="center">
   <mat-tab label="Cititori dupa XP total">
-    <app-table [data]="tab1" [displayedColumns]="columnsTab1"></app-table>
+    <app-table *ngIf="tab1.length!=0" [data]="tab1" [displayedColumns]="columnsTab1"></app-table>
   </mat-tab>
 
   <mat-tab label="Cititori cu cele mai multe carti finalizate">
-    <app-table [data]="tab2" [displayedColumns]="columnsTab2"></app-table>
+    <app-table *ngIf="tab2.length!=0" [data]="tab2" [displayedColumns]="columnsTab2"></app-table>
   </mat-tab>
 
   <mat-tab label="Cei mai activi cititori dupa categorie">
-    <app-table [data]="tab3" [displayedColumns]="columnsTab3"></app-table>
+    <app-table *ngIf="tab3.length!=0" [data]="tab3" [displayedColumns]="columnsTab3"></app-table>
   </mat-tab>
 
   <mat-tab label="Cele mai citite categorii">
-    <app-table [data]="tab4" [displayedColumns]="columnsTab4"></app-table>
+    <app-table *ngIf="tab4.length!=0" [data]="tab4" [displayedColumns]="columnsTab4"></app-table>
   </mat-tab>
 
   <mat-tab label="Carti dupa numarul de pagini">
-    <app-table [data]="tab5" [displayedColumns]="columnsTab5"></app-table>
+    <app-table *ngIf="tab5.length!=0" [data]="tab5" [displayedColumns]="columnsTab5"></app-table>
   </mat-tab>
 </mat-tab-group>

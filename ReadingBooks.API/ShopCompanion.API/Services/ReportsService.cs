@@ -50,7 +50,7 @@ namespace ShopCompanion.API.Services
             var sqlQuery = @$"SELECT TOP 10 ROW_NUMBER() OVER(ORDER BY (SELECT 1)) AS Position, UserName, Category, CategoryProgress.XPTotal 
                             FROM CategoryProgress 
                             JOIN (
-	                            Select Max(XPTotal) AS TOTAL 
+	                            Select DISTINCT Max(XPTotal) AS TOTAL 
 	                            From CategoryProgress 
 	                            Group by Category
 	                            ) AS A 
@@ -79,7 +79,7 @@ namespace ShopCompanion.API.Services
 
         public List<BooksWithNbPages> GetBooksByNbPages()
         {
-            var sqlQuery = @$"Select Top 10 ROW_NUMBER() OVER(Order by (SELECT 1)) AS Position, Title, Categorii, NrPag
+            var sqlQuery = @$"Select Top 10 ROW_NUMBER() OVER(Order by (SELECT 1)) AS Position, Title, Categorii, Autor, NrPag
                             From Books
                             Order by NrPag Desc";
             using (IDbConnection connection = new SqlConnection(_configuration.GetConnectionString("LocalDB")))

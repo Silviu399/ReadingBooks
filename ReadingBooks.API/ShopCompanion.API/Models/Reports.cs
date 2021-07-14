@@ -40,6 +40,7 @@ namespace ShopCompanion.API.Models
         public int Position { get; set; }
         public string Title { get; set; }
         public string Categorii { get; set; }
+        public string Autor { get; set; }
         public int NrPag { get; set; }
     }
 }
