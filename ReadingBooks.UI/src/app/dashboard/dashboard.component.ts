@@ -17,8 +17,7 @@ export class DashboardComponent implements OnInit {
     this.getData();
   }
 
-  ngOnInit(): void {
-  }
+  ngOnInit(): void {}
 
   public getData() {
     const stringUser = sessionStorage.getItem('user');

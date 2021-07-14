@@ -10,10 +10,10 @@ import { BooksService } from 'src/app/services/books.service';
   templateUrl: './add-book-dialog.component.html',
   styleUrls: ['./add-book-dialog.component.scss'],
 })
-export class AddBookDialogComponent implements OnInit  {
-  public autor: string = "";
-  public nrPag: string = "";
-  public category: string = "";
+export class AddBookDialogComponent implements OnInit {
+  public autor: string = '';
+  public nrPag: string = '';
+  public category: string = '';
   public categories: string[] = [];
   public userData: User;
 
@@ -26,7 +26,7 @@ export class AddBookDialogComponent implements OnInit  {
   ngOnInit(): void {
     this.nrPag = this.data.nrPag.toString();
     this.autor = this.data.autor;
-    this._bookService.getCategory().subscribe((data)=>{
+    this._bookService.getCategory().subscribe((data) => {
       this.categories = data;
     });
     const stringUser = sessionStorage.getItem('user');
@@ -46,8 +46,8 @@ export class AddBookDialogComponent implements OnInit  {
       categorii: this.category,
       progres: 0,
       uidUser: this.userData.uid,
-      userName: this.userData.displayName
-    }
+      userName: this.userData.displayName,
+    };
     this._bookService.createBook(book).subscribe(() => {
       this.dialogRef.close();
       location.reload();

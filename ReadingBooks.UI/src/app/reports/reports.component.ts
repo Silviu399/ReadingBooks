@@ -1,5 +1,11 @@
 import { Component, OnInit } from '@angular/core';
-import { BooksWithNbPages, CategoryWithNumberOfBooksFinalized, ReadersByXP, ReadersWithMostBooksFinished, TopReadersPerCategory } from '../models/reports.model';
+import {
+  BooksWithNbPages,
+  CategoryWithNumberOfBooksFinalized,
+  ReadersByXP,
+  ReadersWithMostBooksFinished,
+  TopReadersPerCategory,
+} from '../models/reports.model';
 import { ReportsService } from '../services/reports.service';
 
 @Component({
@@ -29,9 +35,11 @@ export class ReportsComponent implements OnInit {
       this.tab3 = data;
     });
 
-    this.reportService.getCategorysByNumberOfBooksFinalized().subscribe((data) => {
-      this.tab4 = data;
-    });
+    this.reportService
+      .getCategorysByNumberOfBooksFinalized()
+      .subscribe((data) => {
+        this.tab4 = data;
+      });
 
     this.reportService.getBooksByNbPages().subscribe((data) => {
       this.tab5 = data;
@@ -104,7 +112,7 @@ export class ReportsComponent implements OnInit {
     'Nume',
     'Categorie',
     'Nume autor',
-    'Numar pagini'
+    'Numar pagini',
   ];
   // public tab5 = [
   //   {
